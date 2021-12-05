@@ -10,12 +10,10 @@ void main()
     scanf("%d",&c);
     if(c==1)
     {
-        if(top<=n){
-            for(int i=0;i<n;i++)
-            {
-                scanf("%d",&a[i]);
-                top=top+1;
-            }
+        if(top<n-1){
+            printf("Enter element:");
+            top++;
+            scanf("%d",&a[top]);
         }
         else 
         {
@@ -37,7 +35,7 @@ void main()
             printf("Stack UNderflow");
         }
         else {
-            for(int i=0;i<=top;i++){
+            for(int i=top;i>=0;i--){
                 printf("%d",a[i]);
             }
         }
